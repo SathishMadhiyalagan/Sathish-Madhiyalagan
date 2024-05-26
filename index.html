@@ -1,45 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sathish Madhiyalagan</title>
+    <title>Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Make sure the body takes the full height of the viewport */
-            margin: 0; /* Remove default body margin */
-            background-color: #ffe4e1; /* Light pink background */
-            font-family: 'Pacifico', cursive; /* Cute, playful font */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f8ff;
         }
 
-        div {
-            background-color: #fff0f5; /* Lavender blush background for the div */
-            padding: 20px 40px;
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 24px;
-            color: #ff69b4; /* Hot pink text color */
-            animation: pop 0.5s ease-out; /* Pop animation */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes pop {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
+        .profile-block {
+            padding: 5px 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border: 2px solid #00bfff;
+        }
+
+        header .contact-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        header .contact-info div,
+        header .contact-info a {
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        header .contact-info a {
+            color: #00bfff;
+        }
+
+        h1 {
+            margin: 0;
+            color: #00bfff;
+        }
+
+        h2 {
+            color: #ff69b4;
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .skills,
+        .experience,
+        .education {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li,
+        .experience li,
+        .education li {
+            margin-bottom: 10px;
+        }
+
+        .experience .job,
+        .education .degree {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .experience .job h4,
+        .education .degree h4 {
+            margin: 0;
+            color: #00bfff;
+        }
+
+        .experience .job p,
+        .education .degree p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            100% {
-                transform: scale(1);
-                opacity: 1;
+
+            header img {
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
+
 <body>
-    <div>Welcome to my site...</div>
+    <div class="container">
+        <header>
+            <img src="https://media.licdn.com/dms/image/D5603AQHuLZ8Z-bbzlA/profile-displayphoto-shrink_400_400/0/1715436010124?e=1722470400&v=beta&t=RYd1_9OgoS0Jrm7nAH92LpmOeUYAP-3kXvKddrvgVJ4" alt="Profile Picture">
+            <div class="profile-block">
+                <h1>Sathish Madhiyalagan</h1>
+                <div class="contact-info">
+                    <div>Email: pmathish95@gmail.com</div>
+                    <div>Phone: 9585668615</div>
+                    <a href="https://www.linkedin.com/in/sathish-madhiyalagan-be-python-developer/">
+                        LinkedIn: Sathish Madhiyalagan
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h2>Summary</h2>
+            <p>Since 2021, I've been on an exciting journey, constantly pushing the boundaries of technology. My work
+                spans Python and Django for web applications, Laravel for PHP-based features, and React Native for
+                mobile development. I'm passionate about delivering cutting-edge solutions that drive business growth
+                and enhance user experiences. Consistency has been my ally, and I'm eager to continue my journey in the
+                world of technology and innovation.
+
+                In my free time, I'm dedicated to expanding my knowledge. I'm embarking on a journey into Python data
+                science for my own interests, driven by my love for mathematics. Data science, to me, is one form of
+                mathematical art that makes the world of numbers even more fascinating.</p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>Python (Programming Language)</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React js, React Native</li>
+                <li>SQL, MySql</li>
+                <li>Tailwind CSS, Bootstrap3</li>
+                <li>Django, Laravel</li>
+                <li>Data Science (NumPy, Pandas, Matplotlib)</li>
+                <li>Git, Jira</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <ul class="experience">
+                <li class="job">
+                    <div>
+                        <h4>Senior Web Developer</h4>
+                        <p>Soverg Pvt Ltd. | Dec 2022 - Present</p>
+                    </div>
+                    <div>Bengaluru, Karnataka, India · On-site</div>
+                    <p>Developed numerous web applications and mobile development using React, Python Django, and Laravel PHP, improving client satisfaction by 30%.</p>
+                </li>
+                <li class="job">
+                    <div>
+                        <h4>Python Full Stack Developer</h4>
+                        <p>UTF Technologies India Pvt Ltd | Oct 2021 - Dec 2022</p>
+                    </div>
+                    <div>Bengaluru, Karnataka, India · On-site</div>
+                    <p>Designed and implemented responsive web applications, collaborating with designers and other developers.</p>
+                </li>
+                <li class="job">
+                    <div>
+                        <h4>Software Trainee</h4>
+                        <p>Palle Technologies | Mar 2021 - Sep 2021</p>
+                    </div>
+                    <div>Bengaluru, Karnataka, India · On-site</div>
+                    <p>Learned Python Django, MySQL, and basics of Data Science.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul class="education">
+                <li class="degree">
+                    <div>
+                        <h4>Post Graduate Programme in Data Science & AI</h4>
+                        <p>International Institute of Information Technology Bangalore | Nov 2023 - Oct 2024</p>
+                    </div>
+                    <p>Currently studying. Skills: Data Science, SQL, Machine Learning, Deep Learning, Artificial Intelligence (AI), NumPy, Pandas, MySQL</p>
+                </li>
+                <li class="degree">
+                    <div>
+                        <h4>Post Graduate Programme in Data Science & AI</h4>
+                        <p>upGrad.com | Nov 2023 - Oct 2024</p>
+                    </div>
+                    <p>Currently studying. Committed to continuous learning and staying ahead in the dynamic field of data science. Skills: Data Science, SQL, Machine Learning, Deep Learning, AI, NumPy, Pandas, Python</p>
+                </li>
+                <li class="degree">
+                    <div>
+                        <h4>Python Fullstack Developer (Django) and Data Science</h4>
+                        <p>Palle Technologies | Mar 2021 - Sep 2021</p>
+                    </div>
+                    <p>Completed course. Skills: Data Science, SQL, Git, Machine Learning, Deep Learning, AI, NumPy, Pandas, Databases, Django, Python</p>
+                </li>
+                <li class="degree">
+                    <div>
+                        <h4>Bachelor of Engineering in Mechanical Engineering</h4>
+                        <p>Anand Institute Of Higher Technology | Sep 2012 - May 2016</p>
+                    </div>
+                    <p>Grade: 6.77 (First Class)</p>
+                </li>
+                <li class="degree">
+                    <div>
+                        <h4>Biomathematics</h4>
+                        <p>Sendhil Matric Hr Sec School | Jun 2010 - May 2012</p>
+                    </div>
+                    <p>Grade: 83%. Activities and societies: volleyball, carrom</p>
+                </li>
+                <li class="degree">
+                    <div>
+                        <h4>10th Standard, State Board</h4>
+                        <p>St. Joseph's High School, Sesurajapuram | Jun 2009 - May 2010</p>
+                    </div>
+                    <p>Grade: 83.6%</p>
+                </li>
+            </ul>
+        </section>
+    </div>
 </body>
+
 </html>
