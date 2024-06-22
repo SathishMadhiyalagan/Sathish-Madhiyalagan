@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Web Developer Experience</title>
+    <link rel="icon"
+        href="https://media.licdn.com/dms/image/D5603AQHuLZ8Z-bbzlA/profile-displayphoto-shrink_400_400/0/1715436010124?e=1722470400&v=beta&t=RYd1_9OgoS0Jrm7nAH92LpmOeUYAP-3kXvKddrvgVJ4"
+        sizes="32x32">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0px;
+                /* Adjust margin for smaller screens */
+            }
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .contact-info div,
+        header .contact-info a {
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        header .contact-info a {
+            color: #007bff;
+        }
+
+        h1 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .experience {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience li {
+            margin-bottom: 20px;
+        }
+
+        .experience .job {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .experience .job h4 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .experience .job p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header img {
+                margin-bottom: 20px;
+            }
+        }
+
+        .home-button {
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /* margin-bottom: 20px; */
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+
+        .feature-section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-section h3 {
+            margin-top: 0;
+        }
+
+        .feature-section p {
+            color: #555;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .feature-points{
+            padding-top: 10px;
+        }
+        #job-duration{
+            font-size: large;
+        }
+        .job-durationFont{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="experience-header">
+            <h1>Senior Web Developer Experience</h1>
+            <button class="home-button" onclick="window.location.href='/'">Home</button>
+        </header>
+        <ul class="experience">
+            <li class="job">
+                <div>
+                    <!-- <h4>Senior Web Developer</h4> -->
+                    <p id="job-duration">Soverg Pvt Ltd. | Dec 2022 - Present</p>
+                </div>
+                <script>
+                    function calculateMonthsSinceJoin(joinDate) {
+                        const now = new Date();
+                        const join = new Date(joinDate);
+                        let months = (now.getFullYear() - join.getFullYear()) * 12;
+                        months -= join.getMonth();
+                        months += now.getMonth();
+                        return months <= 0 ? 0 : months;
+                    }
+
+                    const joinDate = '2022-12-12';
+                    const monthsSinceJoin = calculateMonthsSinceJoin(joinDate);
+                    const jobDurationElement = document.getElementById('job-duration');
+                    jobDurationElement.innerHTML = `Soverg Pvt Ltd. | Dec 2022 - Present <span class="job-durationFont">(${monthsSinceJoin} months)</span>`;
+                </script>
+                <div>Bengaluru, Karnataka, India · On-site</div>
+                <p>Developed numerous web applications and mobile development using React, Python Django, and Laravel
+                    PHP, improving client satisfaction by 30%.</p>
+
+                    <div class="feature-section">
+                        <h3>Project: Sprouter - Social Platform</h3>
+                        <p>Worked on a product named <strong>Sprouter</strong>, a platform that consolidates all social media into one place, similar to <a class="highlight" href="https://sprouter.online/">Sprouter Online</a>.</p>
+                    </div>
+    
+
+                <div class="feature-section">
+                    <h3>Chatbot Development</h3>
+                    <p>Developed a chatbot using Python. Initially, the accuracy was low, but continuous improvement was
+                        achieved by:</p>
+                    <ul class="feature-points">
+                        <li>Utilizing <span class="highlight">Python Django</span> for backend development and <span
+                                class="highlight">MySQL</span> for data storage.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>RSS Feed Integration</h3>
+                    <p>Integrated RSS feeds to gather news and updates from various sources:</p>
+                    <ul class="feature-points">
+                        <li>Collected data from various sources such as RSS feeds from news channels like <span
+                                class="highlight">CNBC, India Today, and Fox News</span>.</li>
+                        <li>Implemented backend logic to fetch and parse RSS feeds using <span class="highlight">Python
+                                Django</span>.</li>
+                        <li>Displayed the news updates dynamically on the platform using <span class="highlight">HTML,
+                                CSS, JavaScript, and AJAX jQuery</span>.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>Manage Custom Links and Files</h3>
+                    <ul class="feature-points">
+                        <li><span class="highlight">Feature:</span> Utilized the Flaticon API to allow users to add
+                            icons easily to their custom links and files.</li>
+                    </ul>
+                </div>
+                <div class="feature-section">
+                    <h3>Event Management</h3>
+                    <ul class="feature-points">
+                        <li><span class="highlight">Feature:</span> Created an event management module where users can
+                            create, publish, and book tickets for events.</li>
+                        <li><span class="highlight">Analytics Dashboard:</span> Monitored all activities via an
+                            analytics dashboard with Stripe integration for payments.</li>
+                    </ul>
+                </div>
+
+
+                <div class="feature-section">
+                    <h3>React Native App</h3>
+                    <p>Developed a mobile app using <span class="highlight">React Native</span>, incorporating the same
+                        RSS Feed features as the web platform:</p>
+                    <ul class="feature-points">
+                        <li>Integrated backend APIs developed in <span class="highlight">Laravel</span> and displayed
+                            data dynamically in the app.</li>
+                    </ul>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
